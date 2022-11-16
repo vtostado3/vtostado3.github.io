@@ -6,34 +6,16 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: f2f7f5;
-  --primary-color: #00473e;
+  --bg-color: #abd1c6;
+  --primary-color: #004643;
   --highlight-color: #fa5246;
-  --secondary-color: #faae2b;
-  --primary-shadow: #8b8eaf;
-  --paragraph-color: #475d5b;
-  --secondary-shadow: #a17a69;
+  --secondary-color: #004643;
+  --paragraph-color: #001e1d;
+  --hover-color: #f9bc60;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
-  --transition: 0.3s;
-  --shadow-color: 33deg 52% 45%;
-  --shadow-elevation-medium:
-    -0.1px 1px 1px hsl(var(--shadow-color) / 0.28),
-    -0.2px 2.2px 2.3px -0.8px hsl(var(--shadow-color) / 0.26),
-    -0.5px 4.4px 4.6px -1.5px hsl(var(--shadow-color) / 0.24),
-    -1px 9.2px 9.6px -2.3px hsl(var(--shadow-color) / 0.22),
-    -1.9px 18.1px 19px -3px hsl(var(--shadow-color) / 0.2);
-  --shadow-elevation-medium-footer:
-    0px -0.5px 0.5px hsl(var(--shadow-color) / 0.63),
-    0.1px -1.6px 1.6px -1.1px hsl(var(--shadow-color) / 0.55),
-    0.2px -4.7px 4.7px -2.2px hsl(var(--shadow-color) / 0.47),
-    0.5px -12.3px 12.3px -3.3px hsl(var(--shadow-color) / 0.39);
-  --shadow-color-project: 33deg 34% 44%;
-  --shadow-elevation-medium-project:
-    -0.4px 0.5px 0.8px hsl(var(--shadow-color-project) / 0.45),
-    -3px 3.2px 5.5px -0.8px hsl(var(--shadow-color-project) / 0.59),
-    -10.5px 11.3px 19.2px -1.7px hsl(var(--shadow-color-project) / 0.73);
+  --transition: 0.1s;
 }
 /* Variables end */
 
@@ -46,7 +28,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
 ul {
@@ -58,19 +39,10 @@ a {
   color: var(--primary-color);
 }
 
-
-
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
 }
-
-section {
-  /* max-width: 1100px;
-  margin: auto; */
-}
-
-/* CSS Resets end */
 
 /* Navbar */
 nav {
@@ -90,17 +62,13 @@ nav h1 {
   color: var(--primary-color);
 }
 
-nav h1 a:hover {
-   color: var(--secondary-color);
-}
 
 nav li a {
   color: var(--primary-color);
   transition: var(--transition);
 }
-nav li a:hover {
-  color: var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+nav a:hover {
+  border-bottom: 2px solid var(--hover-color);
 }
 
 nav ul {
@@ -142,11 +110,15 @@ nav ul li {
 .bio {
   padding: 0.625rem;
   border-radius: 6px;
-  /*box-shadow: 0px 2px 15px 2px var(--primary-shadow);*/
 }
 
 .bio h1 {
   margin-bottom: var(--bottom-margin);
+}
+
+.bio h2 {
+    color: #0f3433;
+
 }
 
 .bio p {
@@ -162,6 +134,10 @@ nav ul li {
   padding: 32px 0;
   margin-top: 2rem;
 
+}
+
+.projects p {
+    font-size: 17px;
 }
 
 .project-pic {
@@ -262,12 +238,6 @@ article:has(:hover, :focus) {
 Generic layout (demo looks)
 **************************/
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 
 .articles {
   display: grid;
@@ -322,10 +292,9 @@ Generic layout (demo looks)
 
 /* Footer section */
 footer {
-  background-color: var(--bg-color);
+  background-color: var(--secondary-color);
   padding: 1.25rem;
   text-align: center;
-  margin: 2rem 0 0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -337,16 +306,15 @@ footer .icons {
     justify-content: center;
     padding-top: 1rem;
     font-size: 1.5rem;
-
 }
 
-footer a:hover {
-  color: var(--secondary-color);
+footer .icons li a:hover {
+  color: var(--highlight-color);
 }
 
 footer .icons li a{
    margin: 0 1rem 0rem 1rem;
-
+   color: var(--bg-color);
 }
 
 
